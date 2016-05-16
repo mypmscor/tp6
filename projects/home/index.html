@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP04 - Multimedia</title>
+    <script type="text/javascript" src="../../commun/scripts/favicon.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../../commun/css/common_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+
+<section class="shadow pulseur">
+    
+	<label id="label" style="color:orange;cursor: pointer;" for="sourd">
+	<input id="sourd" type="checkbox" />Sourdine</label>
+ 
+
+<div class="hh1">
+<h1 id="h1">Mario Akanya</h1>
+</div>
+<div class="imagecontain">
+<a href="">
+	<img class="image" src="images/mak1.jpg" alt="Mario MakLands">
+</a>
+</div>
+<p class="p0">Bienvenue sur mon site web!</p>
+<p class="p1">Je vous invite a le visiter. Les rubriques disponibles, en ordre alphabetique, sont les suivantes:</p>
+<ul id="ulMenu">
+<!--
+<li><a  href="../langues/index.html">Langues+</a></li>
+<li><a  href="../pens/index.html">Pens+</a></li>
+<li><a  href="../youtube/youtube.html">YouTube+</a></li>
+<li><a  href="../tutoriel/index.html">Tutoriel+</a></li>
+ -->
+</ul>
+
+<audio id="audio" controls  hidden >
+  <source src="audio/maudio.mp3" type="audio/mpeg">
+Bienvenue sur notre site. Nous vous souhaitons une bonne balade.
+</audio>
+
+</section> 
+    
+    <script id="entry-template" type="text/x-handlebars-template">
+{{#each projects}}
+    <li><a href="{{dir}}">{{{nom}}}</a>
+    {{#if desc}}
+        <div>{{desc}} 
+            {{#if sujet}}
+            <p>Sujets:
+            {{#each sujet}}
+                        <span>
+                        {{this}}
+                        </span>
+            {{/each}}
+            </p>
+            {{/if}}
+        </div>
+    {{/if}}
+       
+    </li>
+{{/each}}
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script src="scripts/main.js"></script>
+     
+</body>
+</html>

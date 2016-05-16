@@ -1,0 +1,47 @@
+$(function()
+{
+
+    function creerMenu() {
+    
+    var projects = [
+
+                {
+                    nom: "Tutoriel+",
+                    dir: "../tutoriel/index.html"},
+                {
+                    nom: "Pens+",
+                    dir: "../pens/index.html"},
+                {
+                    nom: "Home+",
+                    dir: "../home/index.html"},
+    
+                {
+                    nom: "Todo",
+                    dir: "../todo/index.html"}
+                ];
+    
+    var ul = document.querySelector("#alltasks");
+    
+    for(var i = 0; i < projects.length; i++)
+    {
+        ul.innerHTML += creerItemMenu(projects[i]);
+    }
+    
+
+    function creerItemMenu(project) {
+      var li = "";
+      li += "<li>";
+      li += "<a href=";
+      li += project.dir;
+      li += ">";
+      li += project.nom;
+      li += "</a>";
+      li += "</li>";
+
+      return li;
+    }
+    
+}
+
+
+})();

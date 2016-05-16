@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr" class="gray-on-green">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP04 - Multimedia</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <!--   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" type="text/css" href="../../commun/css/common_style.css">
+     -->
+    
+    <link rel="stylesheet" type="text/css" href="styles.css">
+<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.min.js"></script>
+    <script src="scripts/less.min.js"></script>-->
+
+</head>
+<body>
+
+<div class="retour-btn"><a class="retour" href="../../index.html">Retour a L'accueil</a>
+<br>    
+   Skin: <select id="selectedSkin">
+        <option value="red-on-black" selected>Red on Black</option>
+        <option value="blue-on-orange">Blue on Orange</option>
+		<option value="green-on-gray">Green on Gray</option>
+        <option value="gray-on-green">Gray on Green</option>
+    </select>
+</div>
+<section class="section">    
+<h1 id="todo">Todo</h1>
+    <div class="main">
+        <header>
+            <span class="hide-on-small-screen">Todo</span>
+            <input class="inputone" type="text" id="input" placeholder="Entrez ici..." autofocus>
+        </header>
+        <div id="alltasks">
+            <div class="todolist" id="todolist"></div>
+            <div class="donelist" id="donelist"></div>
+            <template>
+                <article>
+                    <input type="checkbox" class="checkbox">
+                    <div class="text" tabindex="0" contenteditable="true"><!--todotext--></div>
+                    <img class="image" src="delete.png" alt="delete" tabindex="0" />
+                </article>
+            </template>
+        </div>
+    </div>
+</section>
+<div class="footer">
+   <button class="maskBtn"  id="maskBtn">
+        <img src="checkbox.png" alt="checkbox" tabindex="-1">
+        Marquer toutes les taches comme complétées
+   </button> 
+    <button class="deleteBtn" id="deleteBtn">
+        <img src="delete.png" alt="delete" tabindex="-1">Effacer les tâches complétées
+    </button> 
+</div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

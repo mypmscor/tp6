@@ -1,0 +1,50 @@
+[
+    {
+        "nom": "GitHub",
+        "dir": "../github/index.html",
+		"desc": "Mon projet de site web publié sur le GitHub"
+    },
+    {
+        "nom": "Tutoriel JS",
+        "dir": "../tutoriel/index.html"
+    },
+    {
+        "nom": "Pens",
+        "dir": "../pens/index.html",
+        "desc": "Exercices que j'ai faits sur CodePen."
+    },
+    {
+        "nom": "Youtube",
+        "dir": "../youtube/youtube.html"
+    },
+    {
+        "nom": "Todo",
+        "dir": "../todo/index.html"
+    },
+    {
+        "nom": "Todo (<span style = 'color:red'>classique</span>)",
+        "dir": "../todo/index.html?skin=red-on-black"
+    },
+    {
+        "nom": "Todo (<span style = 'color:orange'>Orange</span>)",
+        "dir": "../todo/index.html?skin=blue-on-orange"
+    },
+    {
+        "nom": "Todo (<span style = 'color:gray'>Gray</span>)",
+        "dir": "../todo/index.html?skin=green-on-gray"
+    },
+    {
+        "nom": "Todo (<span style = 'color:green'>Green</span>)",
+        "dir": "../todo/index.html?skin=gray-on-green"
+    },
+    {
+        "nom": "Langues",
+        "dir": "../langues/index.html",
+        "desc": "Pratique de l'utilisation des sélecteurs et de la mise en page avec CSS3",
+        "sujet": [
+            "CSS3",
+            "HTML5",
+            "Selecteurs"
+        ]
+    }
+]

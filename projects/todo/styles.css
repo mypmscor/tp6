@@ -1,0 +1,1590 @@
+:root {
+  @import url(https://fonts.googleapis.com/css?family=Pacifico);
+  @import url(https://fonts.googleapis.com/css?family=Lobster);
+  @import url('../../commun/css/common_style.css');
+  /*
+@main-color: blue;
+@background-color: #FFaa00;
+@highlight-color: black;
+@flash-color: red;
+*/
+}
+:root body {
+  width: 60%;
+  background: #000;
+  margin: 20px auto;
+  height: 100%;
+}
+:root a {
+  text-decoration: underline;
+}
+:root li {
+  color: yellow;
+}
+:root a:link,
+:root li > a {
+  color: blue;
+}
+:root li > a:hover {
+  color: red;
+  text-shadow: 1px 1px red;
+}
+:root a:active {
+  color: yellow;
+}
+:root a:visited {
+  color: green;
+}
+:root ul > li > a:hover {
+  transition: 4s;
+  margin-left: 100px;
+  left: 200px;
+}
+:root .retour-btn {
+  position: absolute;
+  opacity: 0.9;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background: #333;
+  padding-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  height: 80px;
+  width: 250px;
+  border: 3px solid #333;
+  border-bottom-left-radius: 20px;
+  box-shadow: inset 0 0 5px #000050;
+  transition: 5s;
+  color: red;
+}
+:root .retour-btn:hover {
+  position: absolute;
+  opacity: 0.9;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  padding-top: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  height: 80px;
+  width: 200px;
+  border: 3px solid #fff;
+  border-bottom-left-radius: 20px;
+  box-shadow: inset 0px 0 5px rgba(0, 0, 80, 0.95);
+  opacity: 0.2;
+}
+:root ul > li > a:hover {
+  transition: 4s;
+  text-shadow: 200px 0px 0px red;
+  z-index: 1;
+}
+:root section {
+  border-radius: 30px;
+  position: relative;
+  padding: 5px 20px 5px 20px;
+  height: 100%;
+  margin: 10px auto;
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+:root .section > .main {
+  border-radius: 30px;
+  position: relative;
+  padding: 5px 20px 5px 20px;
+  border: 5px solid red;
+  height: 100%;
+  margin: 10px auto;
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  box-shadow: 0px 0px 40px red;
+}
+:root .section > .main {
+  margin-top: 50px;
+}
+@-webkit-keyframes bordercolor {
+  box-shadow: 0px 0px 40px red;
+}
+:root #todo {
+  color: red;
+  font-family: pacifico;
+}
+:root header {
+  padding: 1px;
+  display: flex;
+  flex: row;
+  margin-top: 10px;
+}
+@media (max-width: 400px) {
+  :root span {
+    font-size: 0;
+    margin: auto;
+  }
+  :root section {
+    margin: auto;
+    flex: 1;
+  }
+}
+:root .hide-on-small-screen {
+  margin: 16px 10px;
+  color: red;
+}
+:root placeholder {
+  padding-left: 5px;
+}
+:root .inputone {
+  border-radius: 20px;
+  width: 90%;
+  margin: 10px 0px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #000;
+  padding-left: 1px;
+  /*box-shadow:inset 10px 10px 50px #f00;
+            background: transparent;*/
+  background: red;
+  border: 1px solid red;
+  -moz-box-shadow: 0 0 5px 5px red;
+  -webkit-box-shadow: 0 0 5px 5px red;
+  box-shadow: 0 0 5px 5px red;
+}
+:root article {
+  display: flex;
+  flex: 1;
+  width: inherit;
+  margin: 0px 20px 0px 70px;
+  height: 20px;
+}
+:root .text {
+  float: left;
+  margin-left: 10px;
+  color: #fff;
+  width: 100%;
+  transition: 0.2s;
+}
+:root .image {
+  float: right;
+  margin-right: 100px;
+  transition: 0.5s;
+}
+:root .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  display: flex;
+  width: 100%;
+  background: #fff;
+  transition: 2s ease-in-out;
+}
+:root .footer > * {
+  border: solid 1px gray;
+  color: cyan;
+  background: linear-gradient(255, 255, 255, rgba(255, 255, 255, 0.9));
+  flex: 1;
+  mix-blend-mode: difference;
+  padding: 5px;
+  cursor: pointer;
+  transition: 2s ease-in-out;
+}
+:root .footer > *:hover,
+:root .footer > *:focus {
+  text-shadow: 0 0 10px #134CAF;
+}
+:root .footer:hover,
+:root .footer:focus {
+  opacity: 0.95;
+}
+:root .maskBtn {
+  width: 50%;
+  float: left;
+}
+:root .deleteBtn {
+  width: 50%;
+  float: right;
+}
+:root .footer:hover,
+:root .footer:focus {
+  opacity: 0.97;
+}
+:root .footer > img {
+  width: 15px;
+  vertical-align: middle;
+}
+:root .footer > *:disabled {
+  display: none;
+}
+:root .alltasks {
+  background: #000;
+  display: inline-block;
+  border-radius: 1px;
+  border: 1px solid red;
+  margin-top: 10px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+:root #donelist > article {
+  opacity: 0.5;
+  text-decoration: line-through;
+  color: red;
+}
+:root #todolist:empty::before {
+  content: "Veuillez entrer une nouvelle tâche à faire ici...";
+  font-style: italic;
+  margin-top: 10px;
+  margin-left: 50px;
+  color: lime;
+}
+:root .image:hover,
+:root .image:focus {
+  background: #fff;
+  box-shadow: 0px 0px 20px 5px #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+:root .checkbox {
+  transition: 0.5s;
+  flex: none;
+}
+:root .checkbox:hover,
+:root .checkbox:focus {
+  background: #000;
+  box-shadow: 0px 0px 10px 3px #fff;
+}
+:root img {
+  width: 15px;
+  height: 15px;
+  margin-top: 4px;
+}
+:root.red-on-black {
+  @import url(https://fonts.googleapis.com/css?family=Pacifico);
+  @import url(https://fonts.googleapis.com/css?family=Lobster);
+  @import url('../../commun/css/common_style.css');
+  /*
+@main-color: blue;
+@background-color: #FFaa00;
+@highlight-color: black;
+@flash-color: red;
+*/
+}
+:root.red-on-black body {
+  width: 60%;
+  background: #000000;
+  margin: 20px auto;
+  height: 100%;
+}
+:root.red-on-black a {
+  text-decoration: underline;
+}
+:root.red-on-black li {
+  color: yellow;
+}
+:root.red-on-black a:link,
+:root.red-on-black li > a {
+  color: blue;
+}
+:root.red-on-black li > a:hover {
+  color: red;
+  text-shadow: 1px 1px red;
+}
+:root.red-on-black a:active {
+  color: yellow;
+}
+:root.red-on-black a:visited {
+  color: green;
+}
+:root.red-on-black ul > li > a:hover {
+  transition: 4s;
+  margin-left: 100px;
+  left: 200px;
+}
+:root.red-on-black .retour-btn {
+  position: absolute;
+  opacity: 0.9;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background: #333;
+  padding-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  height: 80px;
+  width: 250px;
+  border: 3px solid #333;
+  border-bottom-left-radius: 20px;
+  box-shadow: inset 0 0 5px #000050;
+  transition: 5s;
+  color: red;
+}
+:root.red-on-black .retour-btn:hover {
+  position: absolute;
+  opacity: 0.9;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background: black;
+  padding-top: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  height: 80px;
+  width: 200px;
+  border: 3px solid black;
+  border-bottom-left-radius: 20px;
+  box-shadow: inset 0px 0 5px rgba(0, 0, 80, 0.95);
+  opacity: 0.2;
+}
+:root.red-on-black ul > li > a:hover {
+  transition: 4s;
+  text-shadow: 200px 0px 0px red;
+  z-index: 1;
+}
+:root.red-on-black section {
+  border-radius: 30px;
+  position: relative;
+  padding: 5px 20px 5px 20px;
+  height: 100%;
+  margin: 10px auto;
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+:root.red-on-black .section > .main {
+  border-radius: 30px;
+  position: relative;
+  padding: 5px 20px 5px 20px;
+  border: 5px solid red;
+  height: 100%;
+  margin: 10px auto;
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  box-shadow: 0px 0px 40px red;
+}
+:root.red-on-black .section > .main {
+  margin-top: 50px;
+}
+@-webkit-keyframes bordercolor {
+  box-shadow: 0px 0px 40px red;
+}
+:root.red-on-black #todo {
+  color: red;
+  font-family: pacifico;
+}
+:root.red-on-black header {
+  padding: 1px;
+  display: flex;
+  flex: row;
+  margin-top: 10px;
+}
+@media (max-width: 400px) {
+  :root.red-on-black span {
+    font-size: 0;
+    margin: auto;
+  }
+  :root.red-on-black section {
+    margin: auto;
+    flex: 1;
+  }
+}
+:root.red-on-black .hide-on-small-screen {
+  margin: 16px 10px;
+  color: red;
+}
+:root.red-on-black placeholder {
+  padding-left: 5px;
+}
+:root.red-on-black .inputone {
+  border-radius: 20px;
+  width: 90%;
+  margin: 10px 0px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #000000;
+  padding-left: 1px;
+  /*box-shadow:inset 10px 10px 50px #f00;
+            background: transparent;*/
+  background: red;
+  border: 1px solid red;
+  -moz-box-shadow: 0 0 5px 5px red;
+  -webkit-box-shadow: 0 0 5px 5px red;
+  box-shadow: 0 0 5px 5px red;
+}
+:root.red-on-black article {
+  display: flex;
+  flex: 1;
+  width: inherit;
+  margin: 0px 20px 0px 70px;
+  height: 20px;
+}
+:root.red-on-black .text {
+  float: left;
+  margin-left: 10px;
+  color: black;
+  width: 100%;
+  transition: 0.2s;
+}
+:root.red-on-black .image {
+  float: right;
+  margin-right: 100px;
+  transition: 0.5s;
+}
+:root.red-on-black .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  display: flex;
+  width: 100%;
+  background: black;
+  transition: 2s ease-in-out;
+}
+:root.red-on-black .footer > * {
+  border: solid 1px gray;
+  color: cyan;
+  background: linear-gradient(255, 255, 255, rgba(255, 255, 255, 0.9));
+  flex: 1;
+  mix-blend-mode: difference;
+  padding: 5px;
+  cursor: pointer;
+  transition: 2s ease-in-out;
+}
+:root.red-on-black .footer > *:hover,
+:root.red-on-black .footer > *:focus {
+  text-shadow: 0 0 10px #134CAF;
+}
+:root.red-on-black .footer:hover,
+:root.red-on-black .footer:focus {
+  opacity: 0.95;
+}
+:root.red-on-black .maskBtn {
+  width: 50%;
+  float: left;
+}
+:root.red-on-black .deleteBtn {
+  width: 50%;
+  float: right;
+}
+:root.red-on-black .footer:hover,
+:root.red-on-black .footer:focus {
+  opacity: 0.97;
+}
+:root.red-on-black .footer > img {
+  width: 15px;
+  vertical-align: middle;
+}
+:root.red-on-black .footer > *:disabled {
+  display: none;
+}
+:root.red-on-black .alltasks {
+  background: #000000;
+  display: inline-block;
+  border-radius: 1px;
+  border: 1px solid red;
+  margin-top: 10px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+:root.red-on-black #donelist > article {
+  opacity: 0.5;
+  text-decoration: line-through;
+  color: red;
+}
+:root.red-on-black #todolist:empty::before {
+  content: "Veuillez entrer une nouvelle tâche à faire ici...";
+  font-style: italic;
+  margin-top: 10px;
+  margin-left: 50px;
+  color: red;
+}
+:root.red-on-black .image:hover,
+:root.red-on-black .image:focus {
+  background: black;
+  box-shadow: 0px 0px 20px 5px black;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+:root.red-on-black .checkbox {
+  transition: 0.5s;
+  flex: none;
+}
+:root.red-on-black .checkbox:hover,
+:root.red-on-black .checkbox:focus {
+  background: #000000;
+  box-shadow: 0px 0px 10px 3px black;
+}
+:root.red-on-black img {
+  width: 15px;
+  height: 15px;
+  margin-top: 4px;
+}
+:root.blue-on-orange {
+  @import url(https://fonts.googleapis.com/css?family=Pacifico);
+  @import url(https://fonts.googleapis.com/css?family=Lobster);
+  @import url('../../commun/css/common_style.css');
+  /*
+@main-color: blue;
+@background-color: #FFaa00;
+@highlight-color: black;
+@flash-color: red;
+*/
+}
+:root.blue-on-orange body {
+  width: 60%;
+  background: #FFaa00;
+  margin: 20px auto;
+  height: 100%;
+}
+:root.blue-on-orange a {
+  text-decoration: underline;
+}
+:root.blue-on-orange li {
+  color: yellow;
+}
+:root.blue-on-orange a:link,
+:root.blue-on-orange li > a {
+  color: blue;
+}
+:root.blue-on-orange li > a:hover {
+  color: blue;
+  text-shadow: 1px 1px blue;
+}
+:root.blue-on-orange a:active {
+  color: yellow;
+}
+:root.blue-on-orange a:visited {
+  color: green;
+}
+:root.blue-on-orange ul > li > a:hover {
+  transition: 4s;
+  margin-left: 100px;
+  left: 200px;
+}
+:root.blue-on-orange .retour-btn {
+  position: absolute;
+  opacity: 0.9;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background: #333;
+  padding-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  height: 80px;
+  width: 250px;
+  border: 3px solid #333;
+  border-bottom-left-radius: 20px;
+  box-shadow: inset 0 0 5px #000050;
+  transition: 5s;
+  color: blue;
+}
+:root.blue-on-orange .retour-btn:hover {
+  position: absolute;
+  opacity: 0.9;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background: black;
+  padding-top: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  height: 80px;
+  width: 200px;
+  border: 3px solid black;
+  border-bottom-left-radius: 20px;
+  box-shadow: inset 0px 0 5px rgba(0, 0, 80, 0.95);
+  opacity: 0.2;
+}
+:root.blue-on-orange ul > li > a:hover {
+  transition: 4s;
+  text-shadow: 200px 0px 0px blue;
+  z-index: 1;
+}
+:root.blue-on-orange section {
+  border-radius: 30px;
+  position: relative;
+  padding: 5px 20px 5px 20px;
+  height: 100%;
+  margin: 10px auto;
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+:root.blue-on-orange .section > .main {
+  border-radius: 30px;
+  position: relative;
+  padding: 5px 20px 5px 20px;
+  border: 5px solid blue;
+  height: 100%;
+  margin: 10px auto;
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  box-shadow: 0px 0px 40px blue;
+}
+:root.blue-on-orange .section > .main {
+  margin-top: 50px;
+}
+@-webkit-keyframes bordercolor {
+  box-shadow: 0px 0px 40px blue;
+}
+:root.blue-on-orange #todo {
+  color: blue;
+  font-family: pacifico;
+}
+:root.blue-on-orange header {
+  padding: 1px;
+  display: flex;
+  flex: row;
+  margin-top: 10px;
+}
+@media (max-width: 400px) {
+  :root.blue-on-orange span {
+    font-size: 0;
+    margin: auto;
+  }
+  :root.blue-on-orange section {
+    margin: auto;
+    flex: 1;
+  }
+}
+:root.blue-on-orange .hide-on-small-screen {
+  margin: 16px 10px;
+  color: blue;
+}
+:root.blue-on-orange placeholder {
+  padding-left: 5px;
+}
+:root.blue-on-orange .inputone {
+  border-radius: 20px;
+  width: 90%;
+  margin: 10px 0px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #FFaa00;
+  padding-left: 1px;
+  /*box-shadow:inset 10px 10px 50px #f00;
+            background: transparent;*/
+  background: blue;
+  border: 1px solid blue;
+  -moz-box-shadow: 0 0 5px 5px blue;
+  -webkit-box-shadow: 0 0 5px 5px blue;
+  box-shadow: 0 0 5px 5px blue;
+}
+:root.blue-on-orange article {
+  display: flex;
+  flex: 1;
+  width: inherit;
+  margin: 0px 20px 0px 70px;
+  height: 20px;
+}
+:root.blue-on-orange .text {
+  float: left;
+  margin-left: 10px;
+  color: black;
+  width: 100%;
+  transition: 0.2s;
+}
+:root.blue-on-orange .image {
+  float: right;
+  margin-right: 100px;
+  transition: 0.5s;
+}
+:root.blue-on-orange .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  display: flex;
+  width: 100%;
+  background: black;
+  transition: 2s ease-in-out;
+}
+:root.blue-on-orange .footer > * {
+  border: solid 1px gray;
+  color: cyan;
+  background: linear-gradient(255, 255, 255, rgba(255, 255, 255, 0.9));
+  flex: 1;
+  mix-blend-mode: difference;
+  padding: 5px;
+  cursor: pointer;
+  transition: 2s ease-in-out;
+}
+:root.blue-on-orange .footer > *:hover,
+:root.blue-on-orange .footer > *:focus {
+  text-shadow: 0 0 10px #134CAF;
+}
+:root.blue-on-orange .footer:hover,
+:root.blue-on-orange .footer:focus {
+  opacity: 0.95;
+}
+:root.blue-on-orange .maskBtn {
+  width: 50%;
+  float: left;
+}
+:root.blue-on-orange .deleteBtn {
+  width: 50%;
+  float: right;
+}
+:root.blue-on-orange .footer:hover,
+:root.blue-on-orange .footer:focus {
+  opacity: 0.97;
+}
+:root.blue-on-orange .footer > img {
+  width: 15px;
+  vertical-align: middle;
+}
+:root.blue-on-orange .footer > *:disabled {
+  display: none;
+}
+:root.blue-on-orange .alltasks {
+  background: #FFaa00;
+  display: inline-block;
+  border-radius: 1px;
+  border: 1px solid blue;
+  margin-top: 10px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+:root.blue-on-orange #donelist > article {
+  opacity: 0.5;
+  text-decoration: line-through;
+  color: blue;
+}
+:root.blue-on-orange #todolist:empty::before {
+  content: "Veuillez entrer une nouvelle tâche à faire ici...";
+  font-style: italic;
+  margin-top: 10px;
+  margin-left: 50px;
+  color: red;
+}
+:root.blue-on-orange .image:hover,
+:root.blue-on-orange .image:focus {
+  background: black;
+  box-shadow: 0px 0px 20px 5px black;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+:root.blue-on-orange .checkbox {
+  transition: 0.5s;
+  flex: none;
+}
+:root.blue-on-orange .checkbox:hover,
+:root.blue-on-orange .checkbox:focus {
+  background: #FFaa00;
+  box-shadow: 0px 0px 10px 3px black;
+}
+:root.blue-on-orange img {
+  width: 15px;
+  height: 15px;
+  margin-top: 4px;
+}
+:root.green-on-gray {
+  @import url(https://fonts.googleapis.com/css?family=Pacifico);
+  @import url(https://fonts.googleapis.com/css?family=Lobster);
+  @import url('../../commun/css/common_style.css');
+  /*
+@main-color: blue;
+@background-color: #FFaa00;
+@highlight-color: black;
+@flash-color: red;
+*/
+}
+:root.green-on-gray body {
+  width: 60%;
+  background: gray;
+  margin: 20px auto;
+  height: 100%;
+}
+:root.green-on-gray a {
+  text-decoration: underline;
+}
+:root.green-on-gray li {
+  color: yellow;
+}
+:root.green-on-gray a:link,
+:root.green-on-gray li > a {
+  color: blue;
+}
+:root.green-on-gray li > a:hover {
+  color: green;
+  text-shadow: 1px 1px green;
+}
+:root.green-on-gray a:active {
+  color: yellow;
+}
+:root.green-on-gray a:visited {
+  color: green;
+}
+:root.green-on-gray ul > li > a:hover {
+  transition: 4s;
+  margin-left: 100px;
+  left: 200px;
+}
+:root.green-on-gray .retour-btn {
+  position: absolute;
+  opacity: 0.9;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background: #333;
+  padding-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  height: 80px;
+  width: 250px;
+  border: 3px solid #333;
+  border-bottom-left-radius: 20px;
+  box-shadow: inset 0 0 5px #000050;
+  transition: 5s;
+  color: green;
+}
+:root.green-on-gray .retour-btn:hover {
+  position: absolute;
+  opacity: 0.9;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background: black;
+  padding-top: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  height: 80px;
+  width: 200px;
+  border: 3px solid black;
+  border-bottom-left-radius: 20px;
+  box-shadow: inset 0px 0 5px rgba(0, 0, 80, 0.95);
+  opacity: 0.2;
+}
+:root.green-on-gray ul > li > a:hover {
+  transition: 4s;
+  text-shadow: 200px 0px 0px green;
+  z-index: 1;
+}
+:root.green-on-gray section {
+  border-radius: 30px;
+  position: relative;
+  padding: 5px 20px 5px 20px;
+  height: 100%;
+  margin: 10px auto;
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+:root.green-on-gray .section > .main {
+  border-radius: 30px;
+  position: relative;
+  padding: 5px 20px 5px 20px;
+  border: 5px solid green;
+  height: 100%;
+  margin: 10px auto;
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  box-shadow: 0px 0px 40px green;
+}
+:root.green-on-gray .section > .main {
+  margin-top: 50px;
+}
+@-webkit-keyframes bordercolor {
+  box-shadow: 0px 0px 40px green;
+}
+:root.green-on-gray #todo {
+  color: green;
+  font-family: pacifico;
+}
+:root.green-on-gray header {
+  padding: 1px;
+  display: flex;
+  flex: row;
+  margin-top: 10px;
+}
+@media (max-width: 400px) {
+  :root.green-on-gray span {
+    font-size: 0;
+    margin: auto;
+  }
+  :root.green-on-gray section {
+    margin: auto;
+    flex: 1;
+  }
+}
+:root.green-on-gray .hide-on-small-screen {
+  margin: 16px 10px;
+  color: green;
+}
+:root.green-on-gray placeholder {
+  padding-left: 5px;
+}
+:root.green-on-gray .inputone {
+  border-radius: 20px;
+  width: 90%;
+  margin: 10px 0px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: gray;
+  padding-left: 1px;
+  /*box-shadow:inset 10px 10px 50px #f00;
+            background: transparent;*/
+  background: green;
+  border: 1px solid green;
+  -moz-box-shadow: 0 0 5px 5px green;
+  -webkit-box-shadow: 0 0 5px 5px green;
+  box-shadow: 0 0 5px 5px green;
+}
+:root.green-on-gray article {
+  display: flex;
+  flex: 1;
+  width: inherit;
+  margin: 0px 20px 0px 70px;
+  height: 20px;
+}
+:root.green-on-gray .text {
+  float: left;
+  margin-left: 10px;
+  color: black;
+  width: 100%;
+  transition: 0.2s;
+}
+:root.green-on-gray .image {
+  float: right;
+  margin-right: 100px;
+  transition: 0.5s;
+}
+:root.green-on-gray .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  display: flex;
+  width: 100%;
+  background: black;
+  transition: 2s ease-in-out;
+}
+:root.green-on-gray .footer > * {
+  border: solid 1px gray;
+  color: cyan;
+  background: linear-gradient(255, 255, 255, rgba(255, 255, 255, 0.9));
+  flex: 1;
+  mix-blend-mode: difference;
+  padding: 5px;
+  cursor: pointer;
+  transition: 2s ease-in-out;
+}
+:root.green-on-gray .footer > *:hover,
+:root.green-on-gray .footer > *:focus {
+  text-shadow: 0 0 10px #134CAF;
+}
+:root.green-on-gray .footer:hover,
+:root.green-on-gray .footer:focus {
+  opacity: 0.95;
+}
+:root.green-on-gray .maskBtn {
+  width: 50%;
+  float: left;
+}
+:root.green-on-gray .deleteBtn {
+  width: 50%;
+  float: right;
+}
+:root.green-on-gray .footer:hover,
+:root.green-on-gray .footer:focus {
+  opacity: 0.97;
+}
+:root.green-on-gray .footer > img {
+  width: 15px;
+  vertical-align: middle;
+}
+:root.green-on-gray .footer > *:disabled {
+  display: none;
+}
+:root.green-on-gray .alltasks {
+  background: gray;
+  display: inline-block;
+  border-radius: 1px;
+  border: 1px solid green;
+  margin-top: 10px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+:root.green-on-gray #donelist > article {
+  opacity: 0.5;
+  text-decoration: line-through;
+  color: green;
+}
+:root.green-on-gray #todolist:empty::before {
+  content: "Veuillez entrer une nouvelle tâche à faire ici...";
+  font-style: italic;
+  margin-top: 10px;
+  margin-left: 50px;
+  color: red;
+}
+:root.green-on-gray .image:hover,
+:root.green-on-gray .image:focus {
+  background: black;
+  box-shadow: 0px 0px 20px 5px black;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+:root.green-on-gray .checkbox {
+  transition: 0.5s;
+  flex: none;
+}
+:root.green-on-gray .checkbox:hover,
+:root.green-on-gray .checkbox:focus {
+  background: gray;
+  box-shadow: 0px 0px 10px 3px black;
+}
+:root.green-on-gray img {
+  width: 15px;
+  height: 15px;
+  margin-top: 4px;
+}
+:root.gray-on-green {
+  @import url(https://fonts.googleapis.com/css?family=Pacifico);
+  @import url(https://fonts.googleapis.com/css?family=Lobster);
+  @import url('../../commun/css/common_style.css');
+  /*
+@main-color: blue;
+@background-color: #FFaa00;
+@highlight-color: black;
+@flash-color: red;
+*/
+}
+:root.gray-on-green body {
+  width: 60%;
+  background: green;
+  margin: 20px auto;
+  height: 100%;
+}
+:root.gray-on-green a {
+  text-decoration: underline;
+}
+:root.gray-on-green li {
+  color: yellow;
+}
+:root.gray-on-green a:link,
+:root.gray-on-green li > a {
+  color: blue;
+}
+:root.gray-on-green li > a:hover {
+  color: gray;
+  text-shadow: 1px 1px gray;
+}
+:root.gray-on-green a:active {
+  color: yellow;
+}
+:root.gray-on-green a:visited {
+  color: green;
+}
+:root.gray-on-green ul > li > a:hover {
+  transition: 4s;
+  margin-left: 100px;
+  left: 200px;
+}
+:root.gray-on-green .retour-btn {
+  position: absolute;
+  opacity: 0.9;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background: #333;
+  padding-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  height: 80px;
+  width: 250px;
+  border: 3px solid #333;
+  border-bottom-left-radius: 20px;
+  box-shadow: inset 0 0 5px #000050;
+  transition: 5s;
+  color: gray;
+}
+:root.gray-on-green .retour-btn:hover {
+  position: absolute;
+  opacity: 0.9;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background: black;
+  padding-top: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  height: 80px;
+  width: 200px;
+  border: 3px solid black;
+  border-bottom-left-radius: 20px;
+  box-shadow: inset 0px 0 5px rgba(0, 0, 80, 0.95);
+  opacity: 0.2;
+}
+:root.gray-on-green ul > li > a:hover {
+  transition: 4s;
+  text-shadow: 200px 0px 0px gray;
+  z-index: 1;
+}
+:root.gray-on-green section {
+  border-radius: 30px;
+  position: relative;
+  padding: 5px 20px 5px 20px;
+  height: 100%;
+  margin: 10px auto;
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+:root.gray-on-green .section > .main {
+  border-radius: 30px;
+  position: relative;
+  padding: 5px 20px 5px 20px;
+  border: 5px solid gray;
+  height: 100%;
+  margin: 10px auto;
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  box-shadow: 0px 0px 40px gray;
+}
+:root.gray-on-green .section > .main {
+  margin-top: 50px;
+}
+@-webkit-keyframes bordercolor {
+  box-shadow: 0px 0px 40px gray;
+}
+:root.gray-on-green #todo {
+  color: gray;
+  font-family: pacifico;
+}
+:root.gray-on-green header {
+  padding: 1px;
+  display: flex;
+  flex: row;
+  margin-top: 10px;
+}
+@media (max-width: 400px) {
+  :root.gray-on-green span {
+    font-size: 0;
+    margin: auto;
+  }
+  :root.gray-on-green section {
+    margin: auto;
+    flex: 1;
+  }
+}
+:root.gray-on-green .hide-on-small-screen {
+  margin: 16px 10px;
+  color: gray;
+}
+:root.gray-on-green placeholder {
+  padding-left: 5px;
+}
+:root.gray-on-green .inputone {
+  border-radius: 20px;
+  width: 90%;
+  margin: 10px 0px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: green;
+  padding-left: 1px;
+  /*box-shadow:inset 10px 10px 50px #f00;
+            background: transparent;*/
+  background: gray;
+  border: 1px solid gray;
+  -moz-box-shadow: 0 0 5px 5px gray;
+  -webkit-box-shadow: 0 0 5px 5px gray;
+  box-shadow: 0 0 5px 5px gray;
+}
+:root.gray-on-green article {
+  display: flex;
+  flex: 1;
+  width: inherit;
+  margin: 0px 20px 0px 70px;
+  height: 20px;
+}
+:root.gray-on-green .text {
+  float: left;
+  margin-left: 10px;
+  color: black;
+  width: 100%;
+  transition: 0.2s;
+}
+:root.gray-on-green .image {
+  float: right;
+  margin-right: 100px;
+  transition: 0.5s;
+}
+:root.gray-on-green .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  display: flex;
+  width: 100%;
+  background: black;
+  transition: 2s ease-in-out;
+}
+:root.gray-on-green .footer > * {
+  border: solid 1px gray;
+  color: cyan;
+  background: linear-gradient(255, 255, 255, rgba(255, 255, 255, 0.9));
+  flex: 1;
+  mix-blend-mode: difference;
+  padding: 5px;
+  cursor: pointer;
+  transition: 2s ease-in-out;
+}
+:root.gray-on-green .footer > *:hover,
+:root.gray-on-green .footer > *:focus {
+  text-shadow: 0 0 10px #134CAF;
+}
+:root.gray-on-green .footer:hover,
+:root.gray-on-green .footer:focus {
+  opacity: 0.95;
+}
+:root.gray-on-green .maskBtn {
+  width: 50%;
+  float: left;
+}
+:root.gray-on-green .deleteBtn {
+  width: 50%;
+  float: right;
+}
+:root.gray-on-green .footer:hover,
+:root.gray-on-green .footer:focus {
+  opacity: 0.97;
+}
+:root.gray-on-green .footer > img {
+  width: 15px;
+  vertical-align: middle;
+}
+:root.gray-on-green .footer > *:disabled {
+  display: none;
+}
+:root.gray-on-green .alltasks {
+  background: green;
+  display: inline-block;
+  border-radius: 1px;
+  border: 1px solid gray;
+  margin-top: 10px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+:root.gray-on-green #donelist > article {
+  opacity: 0.5;
+  text-decoration: line-through;
+  color: gray;
+}
+:root.gray-on-green #todolist:empty::before {
+  content: "Veuillez entrer une nouvelle tâche à faire ici...";
+  font-style: italic;
+  margin-top: 10px;
+  margin-left: 50px;
+  color: red;
+}
+:root.gray-on-green .image:hover,
+:root.gray-on-green .image:focus {
+  background: black;
+  box-shadow: 0px 0px 20px 5px black;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+:root.gray-on-green .checkbox {
+  transition: 0.5s;
+  flex: none;
+}
+:root.gray-on-green .checkbox:hover,
+:root.gray-on-green .checkbox:focus {
+  background: green;
+  box-shadow: 0px 0px 10px 3px black;
+}
+:root.gray-on-green img {
+  width: 15px;
+  height: 15px;
+  margin-top: 4px;
+}
+:root.gray-on-green {
+  @import url(https://fonts.googleapis.com/css?family=Pacifico);
+  @import url(https://fonts.googleapis.com/css?family=Lobster);
+  @import url('../../commun/css/common_style.css');
+  /*
+@main-color: blue;
+@background-color: #FFaa00;
+@highlight-color: black;
+@flash-color: red;
+*/
+}
+:root.gray-on-green body {
+  width: 60%;
+  background: #009900;
+  margin: 20px auto;
+  height: 100%;
+}
+:root.gray-on-green a {
+  text-decoration: underline;
+}
+:root.gray-on-green li {
+  color: yellow;
+}
+:root.gray-on-green a:link,
+:root.gray-on-green li > a {
+  color: blue;
+}
+:root.gray-on-green li > a:hover {
+  color: gray;
+  text-shadow: 1px 1px gray;
+}
+:root.gray-on-green a:active {
+  color: yellow;
+}
+:root.gray-on-green a:visited {
+  color: green;
+}
+:root.gray-on-green ul > li > a:hover {
+  transition: 4s;
+  margin-left: 100px;
+  left: 200px;
+}
+:root.gray-on-green .retour-btn {
+  position: absolute;
+  opacity: 0.9;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background: #333;
+  padding-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  height: 80px;
+  width: 250px;
+  border: 3px solid #333;
+  border-bottom-left-radius: 20px;
+  box-shadow: inset 0 0 5px #000050;
+  transition: 5s;
+  color: gray;
+}
+:root.gray-on-green .retour-btn:hover {
+  position: absolute;
+  opacity: 0.9;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background: black;
+  padding-top: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  height: 80px;
+  width: 200px;
+  border: 3px solid black;
+  border-bottom-left-radius: 20px;
+  box-shadow: inset 0px 0 5px rgba(0, 0, 80, 0.95);
+  opacity: 0.2;
+}
+:root.gray-on-green ul > li > a:hover {
+  transition: 4s;
+  text-shadow: 200px 0px 0px gray;
+  z-index: 1;
+}
+:root.gray-on-green section {
+  border-radius: 30px;
+  position: relative;
+  padding: 5px 20px 5px 20px;
+  height: 100%;
+  margin: 10px auto;
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+:root.gray-on-green .section > .main {
+  border-radius: 30px;
+  position: relative;
+  padding: 5px 20px 5px 20px;
+  border: 5px solid gray;
+  height: 100%;
+  margin: 10px auto;
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  box-shadow: 0px 0px 40px gray;
+}
+:root.gray-on-green .section > .main {
+  margin-top: 50px;
+}
+@-webkit-keyframes bordercolor {
+  box-shadow: 0px 0px 40px gray;
+}
+:root.gray-on-green #todo {
+  color: gray;
+  font-family: pacifico;
+}
+:root.gray-on-green header {
+  padding: 1px;
+  display: flex;
+  flex: row;
+  margin-top: 10px;
+}
+@media (max-width: 400px) {
+  :root.gray-on-green span {
+    font-size: 0;
+    margin: auto;
+  }
+  :root.gray-on-green section {
+    margin: auto;
+    flex: 1;
+  }
+}
+:root.gray-on-green .hide-on-small-screen {
+  margin: 16px 10px;
+  color: gray;
+}
+:root.gray-on-green placeholder {
+  padding-left: 5px;
+}
+:root.gray-on-green .inputone {
+  border-radius: 20px;
+  width: 90%;
+  margin: 10px 0px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #009900;
+  padding-left: 1px;
+  /*box-shadow:inset 10px 10px 50px #f00;
+            background: transparent;*/
+  background: gray;
+  border: 1px solid gray;
+  -moz-box-shadow: 0 0 5px 5px gray;
+  -webkit-box-shadow: 0 0 5px 5px gray;
+  box-shadow: 0 0 5px 5px gray;
+}
+:root.gray-on-green article {
+  display: flex;
+  flex: 1;
+  width: inherit;
+  margin: 0px 20px 0px 70px;
+  height: 20px;
+}
+:root.gray-on-green .text {
+  float: left;
+  margin-left: 10px;
+  color: black;
+  width: 100%;
+  transition: 0.2s;
+}
+:root.gray-on-green .image {
+  float: right;
+  margin-right: 100px;
+  transition: 0.5s;
+}
+:root.gray-on-green .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  display: flex;
+  width: 100%;
+  background: black;
+  transition: 2s ease-in-out;
+}
+:root.gray-on-green .footer > * {
+  border: solid 1px gray;
+  color: cyan;
+  background: linear-gradient(255, 255, 255, rgba(255, 255, 255, 0.9));
+  flex: 1;
+  mix-blend-mode: difference;
+  padding: 5px;
+  cursor: pointer;
+  transition: 2s ease-in-out;
+}
+:root.gray-on-green .footer > *:hover,
+:root.gray-on-green .footer > *:focus {
+  text-shadow: 0 0 10px #134CAF;
+}
+:root.gray-on-green .footer:hover,
+:root.gray-on-green .footer:focus {
+  opacity: 0.95;
+}
+:root.gray-on-green .maskBtn {
+  width: 50%;
+  float: left;
+}
+:root.gray-on-green .deleteBtn {
+  width: 50%;
+  float: right;
+}
+:root.gray-on-green .footer:hover,
+:root.gray-on-green .footer:focus {
+  opacity: 0.97;
+}
+:root.gray-on-green .footer > img {
+  width: 15px;
+  vertical-align: middle;
+}
+:root.gray-on-green .footer > *:disabled {
+  display: none;
+}
+:root.gray-on-green .alltasks {
+  background: #009900;
+  display: inline-block;
+  border-radius: 1px;
+  border: 1px solid gray;
+  margin-top: 10px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+:root.gray-on-green #donelist > article {
+  opacity: 0.5;
+  text-decoration: line-through;
+  color: gray;
+}
+:root.gray-on-green #todolist:empty::before {
+  content: "Veuillez entrer une nouvelle tâche à faire ici...";
+  font-style: italic;
+  margin-top: 10px;
+  margin-left: 50px;
+  color: red;
+}
+:root.gray-on-green .image:hover,
+:root.gray-on-green .image:focus {
+  background: black;
+  box-shadow: 0px 0px 20px 5px black;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+:root.gray-on-green .checkbox {
+  transition: 0.5s;
+  flex: none;
+}
+:root.gray-on-green .checkbox:hover,
+:root.gray-on-green .checkbox:focus {
+  background: #009900;
+  box-shadow: 0px 0px 10px 3px black;
+}
+:root.gray-on-green img {
+  width: 15px;
+  height: 15px;
+  margin-top: 4px;
+}

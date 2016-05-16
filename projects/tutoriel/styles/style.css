@@ -1,0 +1,116 @@
+
+html {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+h1 {
+  font-size: 45px;
+  text-align: center;
+}
+
+p, li {
+  font-size: 16px;  
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+
+html {
+  background-color: #00539F;
+}
+
+body {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #FF9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;  
+  color: #00539F;
+  text-shadow: 3px 3px 1px black;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+a{
+	 text-decoration: underline;
+}
+
+li{
+	color:yellow;
+}
+a:link, li a{
+    color: blue;
+}
+
+li a:hover{
+	color: red;
+	text-shadow: 1px 1px #FF0000;
+}
+a:active {
+    color: yellow;
+}
+a:visited{
+	color:green;
+}
+
+.retourDiv
+{
+    transition:4s;
+}
+.retour-btn  {
+    position: absolute;
+	right: 0;
+	top:0;
+	background: #333;
+	padding-top: 5px;
+	text-align: center;
+	font-weight: bold;
+	font-size:20px;
+	height: 75px;
+	width:200px;
+	border-top-right-radius:0px;
+	border-bottom-left-radius:20px;
+	border:2px solid grey;
+    transition: 6s;
+
+    
+	opacity:0.7;
+	z-index:1;
+		
+    transition: all 0.4s ease 0s;
+	-moz-box-shadow:    inset 0 0 5px rgba(0,0,0,0.95);
+	-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.95);
+	box-shadow:         inset 0 0 5px rgba(0,0,0,0.95);
+	
+}
+
+
+button
+{
+	border-radius: 10px;
+	font-size: 1.2em;
+	height:35px;
+	margin: 3px;
+}
+
+button #user{
+
+}
+.retour-btn:hover
+{
+    box-shadow: inset 0 0 5px 15px #000;
+   cursor: pointer;
+    opacity: .8;
+
+}
