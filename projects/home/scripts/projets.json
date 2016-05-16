@@ -1,7 +1,7 @@
 [
     {
         "nom": "GitHub",
-        "dir": "../github/index.html",
+        "dir": "http://mypmscor.github.io/tp6/projects/home/index.html",
 		"desc": "Mon projet de site web publié sur le GitHub"
     },
     {
